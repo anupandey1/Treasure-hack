@@ -4,7 +4,7 @@ import Landing from './components/Home'
 import Result from './components/Result'
 import './App.css';
 import './Result.css'
-
+import Main from './components/Main'
 
 function App() {
 
@@ -29,8 +29,7 @@ async function  fetchData(e){
       console.log(error.message);
      
     }
-   
-  
+
 
     }
 
@@ -44,6 +43,7 @@ async function  fetchData(e){
     <div className="App">
     <BrowserRouter>
       <Routes>
+        <Route path='/landing' element={<Main/>}/>
         <Route path="/" element={<Landing fetchData={fetchData} handleChange={handleChange} search={search} data={data}/>}/>
         <Route path="/result" element={<Result data={data} diet={diet} health={health} cuisineType={cuisineType} mealType={mealType} setmealType={setmealType} setDiet={setDiet} fetchData={fetchData} setHealth={setHealth} setCuisineType={setCuisineType} />}/>
         </Routes>

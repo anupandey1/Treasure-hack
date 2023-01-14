@@ -10,6 +10,7 @@ import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import Notfound from "../assets/not-found.svg";
 import HomeIcon from '@mui/icons-material/Home';
+import LogoNutrio from '../assets/Logo-nutrio.svg';
 import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
