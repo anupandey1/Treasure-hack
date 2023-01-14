@@ -220,26 +220,33 @@ export default function BasicGrid({
                   {data.hits.map((items) => {
                     return (
                       <>
-                        <div className="container">
-                          <div>
-                            <img src={items.recipe.images.REGULAR.url} alt="" />
+                        <div className="recepi-container">
+                          <div className="grid1">
+                            <img src={items.recipe.images.REGULAR.url} alt="" className="img" />
+                          <div className="item-label">{items.recipe.label}</div>
                           </div>
-                          <p>{items.recipe.label}</p>
-                          <p>{Math.round(items.recipe.calories)}</p>
-                          <div>
+                          
+                            <div className="grid2">
+                          <div  className="item-calorie">Calories</div>
+                          <div  className="item-calorie">Cuisine</div>
+                          <div  className="item-calorie">Diet Type</div>
+                          <div className="item-calories">{`${Math.round(items.recipe.calories)} Cal`}</div>
+                          <div className="item-calories">{`${items.recipe.cuisineType}`}</div>
+                          <div className="item-calories">{`${items.recipe.dietLabels}`}</div>
+                         
+                      
+                          <div className="item-nutritions">
                             {items.recipe.digest.slice(0, 12).map((digest) => {
                               return (
-                                <>
-                                  <p>{digest.label}</p>
-                                  <p>{`${Math.round(digest.total)}gram`}</p>
-                                </>
+                                <div className="subgrid">
+                                  <div className="hello1">{digest.label}</div>
+                                  <div className="hello2">{`${Math.round(digest.total)}gram`}</div>
+                                </div>
                               );
                             })}
                           </div>
-                          <p>{items.recipe.cautions}</p>
-                          <p>{items.recipe.cuisineType}</p>
-                          <p>{items.recipe.dietLabels}</p>
-                          <hr />
+                          </div>
+                        
                         </div>
                       </>
                     );

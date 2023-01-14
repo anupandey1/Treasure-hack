@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Landing from './components/Home'
 import Result from './components/Result'
 import './App.css';
+import './Result.css'
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     const[data,setData] = useState('')
     const[diet,setDiet] = useState('balanced')
     const [health,setHealth] = useState('vegetarian')
-    const[cuisineType,setCuisineType] = useState('Asian')
+    const[cuisineType,setCuisineType] = useState('Indian')
     const[mealType,setmealType] = useState('Lunch')
 
 async function  fetchData(e){
