@@ -9,7 +9,7 @@ const carousel = () => {
   return (
     <>
     <div className="pb-10">
-      <Carousel className='slide'>
+      <Carousel className='slide' infiniteLoop={true} autoPlay transitionTime={1000}>
         <div>
         <img src={img1} className="sl"/>
         </div>
