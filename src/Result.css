@@ -1,0 +1,97 @@
+.recepi-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: rgb(241, 237, 237);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px green;
+}
+
+.recepi-container:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-row-gap: -2rem;
+}
+
+.item-nutritions {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin-top: -4rem;
+  margin-left: 2.5rem;
+  column-gap: 2rem;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.img:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 0.7rem;
+}
+
+.grid1 > .item-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.item-calories {
+  font-size: large;
+  color: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: -5rem;
+}
+
+.item-calorie {
+  font-size: x-large;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.hello1 {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: -1rem;
+}
+
+.hello2 {
+  font-size: 0.8rem;
+  color: green;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88.5vh;
+  flex-direction: column;
+}
+/* .not-found-error{
+  height:'5rem';
+} */

@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Landing from './components/Home'
 import Result from './components/Result'
 import './App.css';
+import './Result.css'
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     const[data,setData] = useState('')
     const[diet,setDiet] = useState('balanced')
     const [health,setHealth] = useState('vegetarian')
-    const[cuisineType,setCuisineType] = useState('Asian')
+    const[cuisineType,setCuisineType] = useState('Indian')
     const[mealType,setmealType] = useState('Lunch')
 
 async function  fetchData(e){
@@ -21,13 +22,14 @@ async function  fetchData(e){
      try {
       let response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${APP_ID}&app_key=${API_KEY}&q=${search}&diet=${diet}&health=${health}&cuisineType=${cuisineType}&mealType=${mealType}`)
      const dataa = await response.json()
-      setData(dataa)
+      setData(dataa);
+      window.scrollTo({top:0,behavior:'scroll'});
       
      } catch (error) {
       console.log(error.message);
      
     }
-
+   
   
 
     }
