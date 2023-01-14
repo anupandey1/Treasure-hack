@@ -22,13 +22,14 @@ async function  fetchData(e){
      try {
       let response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${APP_ID}&app_key=${API_KEY}&q=${search}&diet=${diet}&health=${health}&cuisineType=${cuisineType}&mealType=${mealType}`)
      const dataa = await response.json()
-      setData(dataa)
+      setData(dataa);
+      window.scrollTo({top:0,behavior:'scroll'});
       
      } catch (error) {
       console.log(error.message);
      
     }
-
+   
   
 
     }
