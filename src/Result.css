@@ -146,3 +146,34 @@ color: rgb(56, 47, 47);
   background-color: #058C42;
   color: white;
 }
+
+.search-bar-main{
+  width: 17rem;
+  height: 2rem;
+  border: 2px #058C42 solid;
+  border-radius:.5rem;
+  margin-top: 2rem;
+}
+
+.submit-result{
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-left: .5rem;
+  background-color: #058C42;
+  color:white;
+  border-radius:.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  transition: 1s ease;
+}
+
+.search-place{
+  display: flex;
+  justify-content: flex-start;
+}
+
+input{
+  font-size:1rem ;
+  font-weight: 300;
+
+}
