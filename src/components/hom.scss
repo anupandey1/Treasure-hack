@@ -1,0 +1,65 @@
+svg {
+    height: 2rem;
+    opacity: 0;
+    width: 4rem;
+    transition: 100ms all ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    path {
+      transition: 100ms all ease;
+      height: 100%;
+    }
+    &:hover{
+      opacity: 1;
+      padding-top:0.2rem ;
+      width: 8rem;
+    }
+  }
+  svg#right:hover path {
+    d: path(
+      "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
+    );
+  }
+  .svg-example {
+    //font-size: xx-large;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+    border: 1px solid #000;
+    display: flex;
+    gap: 1.5rem;
+    transition: 100ms all ease;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: #04471c;
+    border-radius: 10rem;
+    color: white;
+    position: relative;
+  }
+  .svg-example:hover {
+    padding-left: 2rem;
+    padding-right: 0rem;
+    background: #0D2818;
+    svg{
+      path {
+        transition: 100ms all ease;
+        height: 100%;
+      }
+      opacity: 1;
+      padding-top:0.2rem ;width: 8rem;
+    }
+}
+.homepg{
+  background: #020202;
+}
+.bord{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 10px solid #ffffff;
+  border-radius: 7rem;
+  background: #ffffff;
+}
