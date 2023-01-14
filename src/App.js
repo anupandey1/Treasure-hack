@@ -1,3 +1,4 @@
+
 import react,{useState} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Landing from './components/Home'
@@ -6,14 +7,14 @@ import './App.css';
 import './Result.css'
 import Main from './components/Main'
 
-function App() {
 
-    const[search,setSearch] = useState('')
-    const[data,setData] = useState('')
-    const[diet,setDiet] = useState('balanced')
-    const [health,setHealth] = useState('vegetarian')
-    const[cuisineType,setCuisineType] = useState('Indian')
-    const[mealType,setmealType] = useState('Lunch')
+function App() {
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState("");
+  const [diet, setDiet] = useState("balanced");
+  const [health, setHealth] = useState("vegetarian");
+  const [cuisineType, setCuisineType] = useState("Asian");
+  const [mealType, setmealType] = useState("Lunch");
 
 async function  fetchData(e){
      e.preventDefault()
@@ -26,36 +27,62 @@ async function  fetchData(e){
       window.scrollTo({top:0,behavior:'scroll'});
       
      } catch (error) {
+
       console.log(error.message);
-     
     }
+  }
 
 
-    }
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-    const handleChange = (e) => {
-      setSearch(e.target.value)
-    }
 
-    console.log(search);
-  
+  console.log(search);
+
   return (
     <div className="App">
+
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Landing
+                fetchData={fetchData}
+                handleChange={handleChange}
+                search={search}
+                data={data}
+              />
+            }
+          />
+          <Route
+            path="/result"
+            element={
+              <Result
+                data={data}
+                diet={diet}
+                health={health}
+                cuisineType={cuisineType}
+                mealType={mealType}
+                setmealType={setmealType}
+                setDiet={setDiet}
+                fetchData={fetchData}
+                setHealth={setHealth}
+                setCuisineType={setCuisineType}/>
+            }
+          />
+
     <BrowserRouter>
       <Routes>
         <Route path='/landing' element={<Main/>}/>
         <Route path="/" element={<Landing fetchData={fetchData} handleChange={handleChange} search={search} data={data}/>}/>
         <Route path="/result" element={<Result data={data} diet={diet} health={health} cuisineType={cuisineType} mealType={mealType} setmealType={setmealType} setDiet={setDiet} fetchData={fetchData} setHealth={setHealth} setCuisineType={setCuisineType} />}/>
+
         </Routes>
-        </BrowserRouter>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
-
