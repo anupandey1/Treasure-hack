@@ -9,6 +9,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -220,7 +221,7 @@ export default function BasicGrid({
                   {data.hits.map((items) => {
                     return (
                       <>
-                        <div className="container">
+                        {/* <div className="container">
                           <div>
                             <img src={items.recipe.images.REGULAR.url} alt="" />
                           </div>
@@ -240,7 +241,9 @@ export default function BasicGrid({
                           <p>{items.recipe.cuisineType}</p>
                           <p>{items.recipe.dietLabels}</p>
                           <hr />
-                        </div>
+                        </div> */}
+                        
+                        
                       </>
                     );
                   })}
