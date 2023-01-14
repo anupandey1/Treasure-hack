@@ -8,6 +8,10 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import Notfound from "../assets/not-found.svg";
+import HomeIcon from '@mui/icons-material/Home';
+import LogoNutrio from '../assets/Logo-nutrio.svg';
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -58,9 +62,12 @@ export default function BasicGrid({
           position: "absolute",
           top: "0",
           boxShadow: "1px 1px 5px 1px black",
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
         <h2 className="text-white">Nutrio</h2>
+        <div><Link to='/'><HomeIcon className="mr-4  text-white text-3xl"/></Link></div>
       </Box>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0.5} sx={{ width: "100vw" }}>
@@ -71,6 +78,11 @@ export default function BasicGrid({
                   Diet
                 </InputLabel>
                 <Select
+                  sx={{
+                    "& .MuiSelect-select": {
+                      width: "7rem",
+                    },
+                  }}
                   labelId="demo-simple-select-helper-label"
                   id="demo-simple-select-helper"
                   value={diet}
@@ -93,6 +105,16 @@ export default function BasicGrid({
                   Health
                 </InputLabel>
                 <Select
+                  sx={{
+                    "& .MuiSelect-select": {
+                      width: "7rem",
+                    },
+                    "& .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper":
+                      {
+                        top:'20vh',
+                       height:'4rem',
+                      },
+                  }}
                   labelId="demo-simple-select-helper-label"
                   id="demo-simple-select-helper"
                   value={health}
@@ -143,6 +165,11 @@ export default function BasicGrid({
                   Meal Type
                 </InputLabel>
                 <Select
+                  sx={{
+                    "& .MuiSelect-select": {
+                      width: "7rem",
+                    },
+                  }}
                   labelId="demo-simple-select-helper-label"
                   id="demo-simple-select-helper"
                   value={mealType}
@@ -165,6 +192,11 @@ export default function BasicGrid({
                   Cuisine Type
                 </InputLabel>
                 <Select
+                  sx={{
+                    "& .MuiSelect-select": {
+                      width: "7rem",
+                    },
+                  }}
                   labelId="demo-simple-select-helper-label"
                   id="demo-simple-select-helper"
                   value={cuisineType}
@@ -200,7 +232,7 @@ export default function BasicGrid({
                 variant="contained"
                 sx={{
                   backgroundColor: "#058C42",
-                  width: "7rem",
+                  width: "10rem",
                   height: "2.8rem",
                   mt: "2rem",
                 }}
@@ -212,7 +244,7 @@ export default function BasicGrid({
           <Grid
             item
             xs={10}
-            sx={{ height: "100vh", overflowY: "auto", mt: "3rem" }}
+            sx={{ height: "92vh", overflowY: "auto", mt: "3rem" }}
           >
             <Item>
               {data.hits ? (
@@ -220,35 +252,57 @@ export default function BasicGrid({
                   {data.hits.map((items) => {
                     return (
                       <>
-                        <div className="container">
-                          <div>
-                            <img src={items.recipe.images.REGULAR.url} alt="" />
+                        <div className="recepi-container">
+                          <div className="grid1">
+                            <img
+                              src={items.recipe.images.REGULAR.url}
+                              alt=""
+                              className="img"
+                            />
+                            <div className="item-label ">
+                              {items.recipe.label}
+                            </div>
                           </div>
-                          <p>{items.recipe.label}</p>
-                          <p>{Math.round(items.recipe.calories)}</p>
-                          <div>
-                            {items.recipe.digest.slice(0, 12).map((digest) => {
-                              return (
-                                <>
-                                  <p>{digest.label}</p>
-                                  <p>{`${Math.round(digest.total)}gram`}</p>
-                                </>
-                              );
-                            })}
+
+                          <div className="grid2">
+                            <div className="item-calorie">Calories</div>
+                            <div className="item-calorie">Cuisine</div>
+                            <div className="item-calorie">Diet Type</div>
+                            <div className="item-calories">{`${Math.round(
+                              items.recipe.calories
+                            )} Cal`}</div>
+                            <div className="item-calories capitalize">{`${items.recipe.cuisineType}`}</div>
+                            <div className="item-calories">{`${items.recipe.dietLabels}`}</div>
+
+                            <div className="item-nutritions">
+                              {items.recipe.digest
+                                .slice(0, 12)
+                                .map((digest) => {
+                                  return (
+                                    <div className="subgrid">
+                                      <div className="hello1">
+                                        {digest.label}
+                                      </div>
+                                      <div className="hello2">{`${Math.round(
+                                        digest.total
+                                      )} mg`}</div>
+                                    </div>
+                                  );
+                                })}
+                            </div>
                           </div>
-                          <p>{items.recipe.cautions}</p>
-                          <p>{items.recipe.cuisineType}</p>
-                          <p>{items.recipe.dietLabels}</p>
-                          <hr />
                         </div>
                       </>
                     );
                   })}
                 </div>
               ) : (
-                <div>
-                  <h3>No Results Found</h3>
-                  <p>Please submit again</p>
+                <div className="not-found">
+                  <img src={Notfound} className="h-[18rem]" />
+                  <div className="font-bold text-2xl text-black mt-4">
+                    No Data Found!{" "}
+                  </div>
+                  <div>Please submit Again</div>
                 </div>
               )}
             </Item>
