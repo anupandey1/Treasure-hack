@@ -9,9 +9,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import Notfound from "../assets/not-found.svg";
-import HomeIcon from '@mui/icons-material/Home';
-import LogoNutrio from '../assets/Logo-nutrio.svg';
+import HomeIcon from "@mui/icons-material/Home";
+import LogoNutrio from "../assets/Logo-nutrio.svg";
 import { Link } from "react-router-dom";
+import Navbar from "./navbar";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -54,7 +55,7 @@ export default function BasicGrid({
         sx={{
           width: "100vw",
           height: "3rem",
-          backgroundColor: "#058C42",
+          backgroundColor: "#04471C",
           fontFamily: "georgia",
           fontSize: "2rem",
           pl: "3.5rem",
@@ -67,7 +68,11 @@ export default function BasicGrid({
         }}
       >
         <h2 className="text-white">Nutrio</h2>
-        <div><Link to='/'><HomeIcon className="mr-4  text-white text-3xl"/></Link></div>
+        <div>
+          <Link to="/">
+            <HomeIcon className="mr-4  text-white text-3xl" />
+          </Link>
+        </div>
       </Box>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0.5} sx={{ width: "100vw" }}>
@@ -111,8 +116,8 @@ export default function BasicGrid({
                     },
                     "& .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper":
                       {
-                        top:'20vh',
-                       height:'4rem',
+                        top: "20vh",
+                        height: "4rem",
                       },
                   }}
                   labelId="demo-simple-select-helper-label"
@@ -231,7 +236,7 @@ export default function BasicGrid({
                 onClick={fetchData}
                 variant="contained"
                 sx={{
-                  backgroundColor: "#058C42",
+                  backgroundColor: "#04471C",
                   width: "10rem",
                   height: "2.8rem",
                   mt: "2rem",

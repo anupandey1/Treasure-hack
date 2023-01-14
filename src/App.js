@@ -5,6 +5,7 @@ import Result from "./components/Result";
 import "./App.css";
 import "./Result.css";
 import Main from "./components/Main";
+import Credit from "../src/components/credits";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -90,6 +91,7 @@ function App() {
               />
             }
           />
+          <Route path="/credit" element={<Credit />} />
         </Routes>
       </BrowserRouter>
     </div>

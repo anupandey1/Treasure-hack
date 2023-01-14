@@ -5,7 +5,7 @@
   margin: 1rem;
   padding: 1rem;
   /* border-radius: 1rem; */
-  box-shadow: 2px 2px 5px green;
+  box-shadow: 2px 2px 5px #04471C;
 }
 
 .recepi-container:hover {
@@ -57,7 +57,7 @@
 
 .item-calories {
   font-size: large;
-  color: green;
+  color: #04471C;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   display: grid;
@@ -82,7 +82,7 @@
 
 .hello2 {
   font-size: 0.8rem;
-  color: green;
+  color: #04471C;
 }
 
 .not-found {
@@ -104,30 +104,58 @@
 
 
 .sub-front-container2{
- margin: 1rem auto ;
+ margin: 0 auto ;
   width:35rem;
 }
 
 
 .dining{
-  animation: anim 3s ease-in-out infinite;
+  animation: anim 2s ease-in-out;
+  animation-iteration-count: 1;
+  opacity: 1;
 }
 
 @keyframes anim {
   0% {
-    margin-top: 3rem;
+    opacity: 0;
+    }
+    10% {
+    opacity: 0.1;
+    }
+    20%{
+      opacity: 0.2;
+    }
+    30% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.4;
     }
     50% {
-    margin-top: 4rem;
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    80% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.9;
     }
     100% {
-    margin-top: 3rem;
+      opacity: 10;
     }
-  }
+}
+  
 
 
 .sub-front-container1{
- margin: 10rem auto ;
+ margin: 0 auto ;
+ margin-top:7rem;
  font-size: 2.5rem;
  font-weight: bold;
  font-family: Georgia, 'Times New Roman', Times, serif;
@@ -150,16 +178,17 @@ color: rgb(56, 47, 47);
 .search-bar-main{
   width: 17rem;
   height: 2rem;
-  border: 2px #058C42 solid;
+  border: 2px #04471C solid;
   border-radius:.5rem;
   margin-top: 2rem;
+  padding: 1.2rem;
 }
 
 .submit-result{
   font-size: 1.2rem;
   font-weight: 200;
   margin-left: .5rem;
-  background-color: #058C42;
+  background-color: #04471C;
   color:white;
   border-radius:.5rem;
   margin-top: 2rem;
@@ -176,4 +205,8 @@ input{
   font-size:1rem ;
   font-weight: 300;
 
+}
+
+.height-fix{
+  height:100vh
 }
