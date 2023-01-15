@@ -17,7 +17,7 @@ function navbar() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
-            bgcolor: "#020202",
+            bgcolor: "#14471C",
             paddingY: ".4rem",
           }}
         >
