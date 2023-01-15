@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Nutrio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link: https://kaleidoscopic-faloodeh-c9ef44.netlify.app/  <br/>
+Figma Design: https://www.figma.com/file/tKAk6lN2g8nYlL3GjZZmap/Nutrio-Design?node-id=0%3A1&t=Gg8VeEWGRceAaTGu-1
 
-## Available Scripts
+## Summary
 
-In the project directory, you can run:
+Nutrio is a recipe platform where you browse your favorite recipe from a database of 100,000+ food recipes. Put in your preferences for the kind of recipe you want and get the desired recipes for you! 
 
-### `npm start`
+## What It Does
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The platform lets the users input in the name of the food and the type of food they want with all the necessary preferences. On submitting, Nutrio will go through the preferences and filter out the desired recipes and foods with the nutrient composition.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![Homepage](https://user-images.githubusercontent.com/84736189/212529247-03ceda3f-b044-44c5-976f-fbf753093d4d.PNG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Creditspage](https://user-images.githubusercontent.com/84736189/212529249-86a47cb8-8e29-410f-b07a-6d16230f1d5c.PNG)
 
-### `npm run build`
+![Searchpage](https://user-images.githubusercontent.com/84736189/212529251-22f12c08-fc85-4b42-b301-2a60d4a16706.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Resultspage](https://user-images.githubusercontent.com/84736189/212529252-fdf2777a-eae3-4d68-ac69-dca7f8a9ca18.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies used
 
-### `npm run eject`
+* HTML5
+* CSS3
+* SCSS
+* JavaScript (ES6)
+* ReactJS
+* Material UI
+* Edamam Nutrition API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Credits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made by Team Gallardo :)
