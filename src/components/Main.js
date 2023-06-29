@@ -1,37 +1,10 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
 import mainImage from "../assets/main-image.svg";
 import Navbar from "./navbar";
 const Main = ({ fetchData, handleChange, search, data }) => {
   return (
     <>
-      {/* <div className="navbar">
-        <Box
-          sx={{
-            width: "100vw",
-            height: "3rem",
-            backgroundColor: "#058C42",
-            fontFamily: "georgia",
-            fontSize: "2rem",
-            pl: "3.5rem",
-            zIndex: 99,
-            position: "absolute",
-            top: "0",
-            boxShadow: "1px 1px 5px 1px black",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <h2 className="text-white">Nutrio</h2>
-          <div>
-            <Link to="/">
-              <HomeIcon className="mr-4  text-white text-3xl" />
-            </Link>
-          </div>
-        </Box>
-      </div> */}
       <div className="height-fix">
         <Navbar />
         <div className="front-container">
