@@ -22,21 +22,19 @@ function navbar() {
           }}
         >
           <Button color="inherit" sx={style}>
-            Home
+          <Link to="/">Home</Link>
           </Button>
           <Button color="inherit" sx={style}>
-            About
+          <Link to="/about"> About it</Link>
           </Button>
           <Button color="inherit" sx={{ fontSize: "1.5rem" }}>
-            NUTRIO
+          <Link to="/">NUTRIO</Link>
           </Button>
-
+          <Button color="inherit" sx={style}>
+          <Link to="/recommends">Recommends</Link>
+          </Button>
           <Button color="inherit" sx={style}>
             <Link to="/credit">credits</Link>
-          </Button>
-
-          <Button color="inherit" sx={style}>
-            Results
           </Button>
         </Stack>
       </AppBar>

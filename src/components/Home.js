@@ -1,20 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 import Nav from "./navbar";
 import "./hom.scss";
 import Carousel from "./carousel";
 import But from "./button";
-// const Home = ({fetchData,handleChange,search,data}) => {
-//   return (
-//     <>
-//     <form >
-//    <input type="text" value={search} onChange={handleChange} />
-//     <Button onClick={fetchData} variant="contained"><Link to='/result'>ok</Link></Button>
-//   </form>
-//     </>
-//   )
-// }
+
 const Home = () => {
   return (
     <>
