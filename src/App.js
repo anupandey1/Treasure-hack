@@ -5,6 +5,8 @@ import Result from "./components/Result";
 import "./App.css";
 import "./Result.css";
 import Main from "./components/Main";
+import About from "../src/components/about";
+import Recommend from "../src/components/recommends";
 import Credit from "../src/components/credits";
 
 function App() {
@@ -91,7 +93,9 @@ function App() {
               />
             }
           />
+          <Route path="/about" element={<About />} />
           <Route path="/credit" element={<Credit />} />
+          <Route path="/recommends" element={<Recommend />} />
         </Routes>
       </BrowserRouter>
     </div>

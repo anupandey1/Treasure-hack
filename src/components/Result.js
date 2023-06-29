@@ -9,9 +9,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import Notfound from "../assets/not-found.svg";
-import HomeIcon from "@mui/icons-material/Home";
-import LogoNutrio from "../assets/Logo-nutrio.svg";
-import { Link } from "react-router-dom";
 import Navbar from "./navbar";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -51,29 +48,7 @@ export default function BasicGrid({
   };
   return (
     <>
-      <Box
-        sx={{
-          width: "100vw",
-          height: "3rem",
-          backgroundColor: "#04471C",
-          fontFamily: "georgia",
-          fontSize: "2rem",
-          pl: "3.5rem",
-          zIndex: 99,
-          position: "absolute",
-          top: "0",
-          boxShadow: "1px 1px 5px 1px black",
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        <h2 className="text-white">Nutrio</h2>
-        <div>
-          <Link to="/">
-            <HomeIcon className="mr-4  text-white text-3xl" />
-          </Link>
-        </div>
-      </Box>
+    <Navbar/>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0.5} sx={{ width: "100vw" }}>
           <Grid item xs={2} sx={{ position: "" }}>
